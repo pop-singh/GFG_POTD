@@ -1,0 +1,4 @@
+if(C==0) return (A==B)?1:0;
+        boolean res = (((B-A)%C == 0) && ((B-A)/C >=0))?true:false;
+        if (res) return 1;
+        return 0;
