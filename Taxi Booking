@@ -1,0 +1,15 @@
+class Solution {
+    public static int minimumTime(int N, int cur, int[] pos, int[] time) {
+        // code here
+        int minTime = Integer.MAX_VALUE;
+    for (int i = 0; i < N; i++) {
+        // Calculate the distance between current position and the ith taxi
+        int distance = Math.abs(pos[i] - cur);
+        // Calculate the time taken by the ith taxi to reach the current position
+        int timeTaken = distance * time[i];
+        // Update the minimum time required to board a taxi
+        minTime = Math.min(minTime, timeTaken); 
+    }
+    return minTime;
+    }
+}
