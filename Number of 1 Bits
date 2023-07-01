@@ -1,0 +1,19 @@
+class Solution {
+    static int setBits(int N) {
+        // code here
+        int count=0;
+        int binaryArray[] = new int[40];
+        int index = 0;
+        while(N>0){
+            binaryArray[index++] = N%2;
+            N/=2;
+        }
+        for(int i=binaryArray.length-1;i>=0;i--){
+            if(binaryArray[i]==1){
+                count++;
+            }
+        }
+        return count;
+        
+    }
+}
