@@ -1,0 +1,24 @@
+class Solution {
+    
+    public int countSubArrayProductLessThanK(long arr[], int n, long k)
+    {
+        int ans=0;
+        long p=1;
+        for(int a=0;a<n;a++){
+            
+            p=1;
+            
+            for(int b=a;b<n;b++){
+                
+                p*=arr[b];
+                
+                if(p<k)ans++;
+                
+                else break;
+
+                
+            }
+        }
+        return ans;
+    }
+}
