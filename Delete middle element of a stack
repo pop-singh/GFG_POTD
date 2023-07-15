@@ -1,0 +1,7 @@
+class Solution
+{
+     public void deleteMid(Stack<Integer> s, int sizeOfStack) {
+        int temp=(sizeOfStack+1)/2;
+      s.remove(temp-1);
+    }
+ }
